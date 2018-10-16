@@ -1,0 +1,73 @@
+/home/null/tools/clion-2018.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/null/ros_ws/moveit_ompl_source/src
+-- Using CATKIN_DEVEL_PREFIX: /home/null/ros_ws/moveit_ompl_source/src/cmake-build-debug/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
+-- This workspace overlays: /opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/null/ros_ws/moveit_ompl_source/src/cmake-build-debug/test_results
+-- Found gmock sources under '/usr/src/gmock': gmock will be built
+-- Found gtest sources under '/usr/src/gmock': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.14
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 44 packages in topological order:
+-- ~~  - moveit (metapackage)
+-- ~~  - moveit_planners (metapackage)
+-- ~~  - moveit_plugins (metapackage)
+-- ~~  - moveit_resources
+-- ~~  - moveit_ros (metapackage)
+-- ~~  - moveit_runtime (metapackage)
+-- ~~  - ompl (plain cmake)
+-- ~~  - universal_robot (metapackage)
+-- ~~  - ur_bringup
+-- ~~  - ur_description
+-- ~~  - ur_gazebo
+-- ~~  - ur_msgs
+-- ~~  - geometric_shapes
+-- ~~  - moveit_msgs
+-- ~~  - ur_driver
+-- ~~  - ur_modern_driver
+-- ~~  - moveit_commander
+-- ~~  - srdfdom
+-- ~~  - moveit_core
+-- ~~  - moveit_controller_manager_example
+-- ~~  - moveit_experimental
+-- ~~  - chomp_motion_planner
+-- ~~  - moveit_ros_perception
+-- ~~  - moveit_ros_planning
+-- ~~  - moveit_fake_controller_manager
+-- ~~  - moveit_kinematics
+-- ~~  - moveit_planners_ompl
+-- ~~  - moveit_ros_move_group
+-- ~~  - moveit_ros_manipulation
+-- ~~  - moveit_ros_robot_interaction
+-- ~~  - moveit_simple_controller_manager
+-- ~~  - moveit_ros_control_interface
+-- ~~  - moveit_visual_tools
+-- ~~  - ur_kinematics
+-- ~~  - moveit_ros_warehouse
+-- ~~  - moveit_ros_benchmarks
+-- ~~  - moveit_ros_planning_interface
+-- ~~  - moveit_planners_chomp
+-- ~~  - moveit_ros_visualization
+-- ~~  - moveit_setup_assistant
+-- ~~  - sims
+-- ~~  - ur10_moveit_config
+-- ~~  - ur3_moveit_config
+-- ~~  - ur5_moveit_config
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CMake Error at /opt/ros/kinetic/share/catkin/cmake/catkin_workspace.cmake:95 (message):
+  This workspace contains non-catkin packages in it, and catkin cannot build
+  a non-homogeneous workspace without isolation.  Try the
+  'catkin_make_isolated' command instead.
+Call Stack (most recent call first):
+  CMakeLists.txt:63 (catkin_workspace)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/null/ros_ws/moveit_ompl_source/src/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/null/ros_ws/moveit_ompl_source/src/cmake-build-debug/CMakeFiles/CMakeError.log".
