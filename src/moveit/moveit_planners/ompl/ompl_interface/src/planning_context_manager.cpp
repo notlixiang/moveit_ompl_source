@@ -43,6 +43,7 @@
 #include <ompl/geometric/planners/rrt/RRT.h>
 #include <ompl/geometric/planners/rrt/pRRT.h>
 #include <ompl/geometric/planners/rrt/RRTConnect.h>
+#include <ompl/geometric/planners/rrt/InformedRRTstarConnect.h>
 #include <ompl/geometric/planners/rrt/TRRT.h>
 #include <ompl/geometric/planners/rrt/LazyRRT.h>
 #include <ompl/geometric/planners/est/EST.h>
@@ -52,6 +53,8 @@
 #include <ompl/geometric/planners/kpiece/BKPIECE1.h>
 #include <ompl/geometric/planners/kpiece/LBKPIECE1.h>
 #include <ompl/geometric/planners/rrt/RRTstar.h>
+#include <ompl/geometric/planners/rrt/RRTstarReform.h>
+#include <ompl/geometric/planners/rrt/InformedRRTstar.h>
 #include <ompl/geometric/planners/prm/PRM.h>
 #include <ompl/geometric/planners/prm/PRMstar.h>
 #include <ompl/geometric/planners/fmt/FMT.h>
@@ -163,6 +166,7 @@ void ompl_interface::PlanningContextManager::registerDefaultPlanners()
 {
   registerPlannerAllocator("geometric::RRT", boost::bind(&allocatePlanner<og::RRT>, _1, _2, _3));
   registerPlannerAllocator("geometric::RRTConnect", boost::bind(&allocatePlanner<og::RRTConnect>, _1, _2, _3));
+  registerPlannerAllocator("geometric::InformedRRTstarConnect", boost::bind(&allocatePlanner<og::InformedRRTstarConnect>, _1, _2, _3));
   registerPlannerAllocator("geometric::LazyRRT", boost::bind(&allocatePlanner<og::LazyRRT>, _1, _2, _3));
   registerPlannerAllocator("geometric::TRRT", boost::bind(&allocatePlanner<og::TRRT>, _1, _2, _3));
   registerPlannerAllocator("geometric::EST", boost::bind(&allocatePlanner<og::EST>, _1, _2, _3));
@@ -171,6 +175,8 @@ void ompl_interface::PlanningContextManager::registerDefaultPlanners()
   registerPlannerAllocator("geometric::BKPIECE", boost::bind(&allocatePlanner<og::BKPIECE1>, _1, _2, _3));
   registerPlannerAllocator("geometric::LBKPIECE", boost::bind(&allocatePlanner<og::LBKPIECE1>, _1, _2, _3));
   registerPlannerAllocator("geometric::RRTstar", boost::bind(&allocatePlanner<og::RRTstar>, _1, _2, _3));
+  registerPlannerAllocator("geometric::RRTstarReform", boost::bind(&allocatePlanner<og::RRTstar>, _1, _2, _3));
+  registerPlannerAllocator("geometric::InformedRRTstar", boost::bind(&allocatePlanner<og::InformedRRTstar>, _1, _2, _3));
   registerPlannerAllocator("geometric::PRM", boost::bind(&allocatePlanner<og::PRM>, _1, _2, _3));
   registerPlannerAllocator("geometric::PRMstar", boost::bind(&allocatePlanner<og::PRMstar>, _1, _2, _3));
   registerPlannerAllocator("geometric::FMT", boost::bind(&allocatePlanner<og::FMT>, _1, _2, _3));

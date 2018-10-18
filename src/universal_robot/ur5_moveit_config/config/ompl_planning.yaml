@@ -31,11 +31,24 @@ planner_configs:
   RRTConnectkConfigDefault:
     type: geometric::RRTConnect
     range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
+  InformedRRTstarConnectConfigDefault:
+    type: geometric::InformedRRTstarConnect
+    range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()    
   RRTstarkConfigDefault:
     type: geometric::RRTstar
     range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
     goal_bias: 0.05  # When close to goal select goal, with this probability? default: 0.05
-    delay_collision_checking: 1  # Stop collision checking as soon as C-free parent found. default 1   
+    delay_collision_checking: 1  # Stop collision checking as soon as C-free parent found. default 1       
+  RRTstarReformkConfigDefault:
+    type: geometric::RRTstarReform
+    range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
+    goal_bias: 0.05  # When close to goal select goal, with this probability? default: 0.05
+    delay_collision_checking: 1  # Stop collision checking as soon as C-free parent found. default 1       
+  InformedRRTstarConfigDefault:
+    type: geometric::InformedRRTstar
+    range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
+    goal_bias: 0.05  # When close to goal select goal, with this probability? default: 0.05
+    delay_collision_checking: 1  # Stop collision checking as soon as C-free parent found. default 1
   TRRTkConfigDefault:
     type: geometric::TRRT
     range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
@@ -52,11 +65,6 @@ planner_configs:
     max_nearest_neighbors: 10  # use k nearest neighbors. default: 10
   PRMstarkConfigDefault:
     type: geometric::PRMstar
-  InformedRRTstarConfigDefault:
-    type: geometric::InformedRRTstar
-    range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
-    goal_bias: 0.05  # When close to goal select goal, with this probability? default: 0.05
-    delay_collision_checking: 1  # Stop collision checking as soon as C-free parent found. default 1
 manipulator:
   planner_configs:
     - SBLkConfigDefault
@@ -71,7 +79,8 @@ manipulator:
     - PRMkConfigDefault
     - PRMstarkConfigDefault
     - InformedRRTstarConfigDefault
-    
+    - InformedRRTstarConnectConfigDefault
+    - RRTstarReformkConfigDefault
   ##Note: commenting the following line lets moveit chose RRTConnect as default planner rather than LBKPIECE
   #projection_evaluator: joints(shoulder_pan_joint,shoulder_lift_joint)
   longest_valid_segment_fraction: 0.01
@@ -89,3 +98,5 @@ endeffector:
     - PRMkConfigDefault
     - PRMstarkConfigDefault
     - InformedRRTstarConfigDefault
+    - InformedRRTstarConnectConfigDefault
+    - RRTstarReformkConfigDefault
