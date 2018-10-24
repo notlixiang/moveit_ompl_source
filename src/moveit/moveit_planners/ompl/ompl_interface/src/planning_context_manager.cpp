@@ -175,7 +175,7 @@ void ompl_interface::PlanningContextManager::registerDefaultPlanners()
   registerPlannerAllocator("geometric::BKPIECE", boost::bind(&allocatePlanner<og::BKPIECE1>, _1, _2, _3));
   registerPlannerAllocator("geometric::LBKPIECE", boost::bind(&allocatePlanner<og::LBKPIECE1>, _1, _2, _3));
   registerPlannerAllocator("geometric::RRTstar", boost::bind(&allocatePlanner<og::RRTstar>, _1, _2, _3));
-  registerPlannerAllocator("geometric::RRTstarReform", boost::bind(&allocatePlanner<og::RRTstar>, _1, _2, _3));
+  registerPlannerAllocator("geometric::RRTstarReform", boost::bind(&allocatePlanner<og::RRTstarReform>, _1, _2, _3));
   registerPlannerAllocator("geometric::InformedRRTstar", boost::bind(&allocatePlanner<og::InformedRRTstar>, _1, _2, _3));
   registerPlannerAllocator("geometric::PRM", boost::bind(&allocatePlanner<og::PRM>, _1, _2, _3));
   registerPlannerAllocator("geometric::PRMstar", boost::bind(&allocatePlanner<og::PRMstar>, _1, _2, _3));
