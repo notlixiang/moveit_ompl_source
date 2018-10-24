@@ -109,14 +109,14 @@ ompl::geometric::RRTstarReform::RRTstarReform(const base::SpaceInformationPtr &s
                                std::bind(&RRTstarReform::bestCostProperty, this));
 
 //    //Configure RRTstarReform to be InformedRRT*:
-    setAdmissibleCostToCome(true);
-    setInformedSampling(true);
-    setTreePruning(true);
-    setPrunedMeasure(true);
+//    setAdmissibleCostToCome(true);
+//    setInformedSampling(true);
+//    setTreePruning(true);
+//    setPrunedMeasure(true);
 //
 //    //Disable conflicting options
-    setSampleRejection(false);
-    setNewStateRejection(false);
+//    setSampleRejection(false);
+//    setNewStateRejection(false);
 //
 //    //Remove those parameters:
 //    params_.remove("use_admissible_heuristic");
