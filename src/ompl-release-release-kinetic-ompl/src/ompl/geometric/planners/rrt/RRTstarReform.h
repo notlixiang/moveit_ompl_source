@@ -40,6 +40,7 @@
 #include "ompl/geometric/planners/PlannerIncludes.h"
 #include "ompl/base/OptimizationObjective.h"
 #include "ompl/datastructures/NearestNeighbors.h"
+#include "ompl/geometric/planners/rrt/RRTConnect.h"
 
 #include <limits>
 #include <vector>
@@ -447,6 +448,8 @@ namespace ompl {
             std::string bestCostProperty() const {
                 return std::to_string(bestCost().value());
             }
+            //RRTConnect Planner
+            ompl::geometric::RRTConnect * RRTConnectPlanner_;
         };
     }
 }

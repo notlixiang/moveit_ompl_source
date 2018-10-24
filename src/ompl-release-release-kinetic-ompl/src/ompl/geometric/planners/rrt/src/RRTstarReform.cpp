@@ -48,6 +48,8 @@
 #include <boost/math/constants/constants.hpp>
 #include <vector>
 
+#include "ompl/geometric/planners/rrt/RRTConnect.h"
+
 ompl::geometric::RRTstarReform::RRTstarReform(const base::SpaceInformationPtr &si) :
         base::Planner(si, "RRTstarReform"),
         goalBias_(0.05),
@@ -107,14 +109,14 @@ ompl::geometric::RRTstarReform::RRTstarReform(const base::SpaceInformationPtr &s
                                std::bind(&RRTstarReform::bestCostProperty, this));
 
 //    //Configure RRTstarReform to be InformedRRT*:
-//    setAdmissibleCostToCome(true);
+    setAdmissibleCostToCome(true);
     setInformedSampling(true);
-//    setTreePruning(true);
-//    setPrunedMeasure(true);
+    setTreePruning(true);
+    setPrunedMeasure(true);
 //
 //    //Disable conflicting options
-//    setSampleRejection(false);
-//    setNewStateRejection(false);
+    setSampleRejection(false);
+    setNewStateRejection(false);
 //
 //    //Remove those parameters:
 //    params_.remove("use_admissible_heuristic");
@@ -126,7 +128,9 @@ ompl::geometric::RRTstarReform::RRTstarReform(const base::SpaceInformationPtr &s
 //    params_.remove("sample_rejection");
 //    params_.remove("new_state_rejection");
 //    params_.remove("focus_search");
+    RRTConnectPlanner_=new ompl::geometric::RRTConnect(si);
 
+    OMPL_INFORM("\n23332141124141433\n");
 }
 
 ompl::geometric::RRTstarReform::~RRTstarReform() {
@@ -275,6 +279,13 @@ ompl::base::PlannerStatus ompl::geometric::RRTstarReform::solve(const base::Plan
 
     // our functor for sorting nearest neighbors
     CostIndexCompare compareFn(costs, *opt_);
+
+    //add RRTconnect here
+
+    RRTConnectPlanner_->clear();
+    bool solved = RRTConnectPlanner_->solve(base::timedPlannerTerminationCondition(1.0));
+    //OMPL_INFORM("RRTConnectPlanner_->solve %s",solved?"true":"false");
+    printf("\n233333\n");
 
     while (ptc == false) {
         iterations_++;
