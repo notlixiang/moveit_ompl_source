@@ -128,9 +128,9 @@ ompl::geometric::RRTstarReform::RRTstarReform(const base::SpaceInformationPtr &s
 //    params_.remove("sample_rejection");
 //    params_.remove("new_state_rejection");
 //    params_.remove("focus_search");
-    RRTConnectPlanner_=new ompl::geometric::RRTConnect(si);
-
     OMPL_INFORM("\n23332141124141433\n");
+//    RRTConnectPlanner_=new ompl::geometric::RRTConnect(si);
+
 }
 
 ompl::geometric::RRTstarReform::~RRTstarReform() {
@@ -282,10 +282,10 @@ ompl::base::PlannerStatus ompl::geometric::RRTstarReform::solve(const base::Plan
 
     //add RRTconnect here
 
-    RRTConnectPlanner_->clear();
-    bool solved = RRTConnectPlanner_->solve(base::timedPlannerTerminationCondition(1.0));
-    //OMPL_INFORM("RRTConnectPlanner_->solve %s",solved?"true":"false");
-    printf("\n233333\n");
+//    RRTConnectPlanner_->clear();
+//    bool solved = RRTConnectPlanner_->solve(base::timedPlannerTerminationCondition(1.0));
+//    //OMPL_INFORM("RRTConnectPlanner_->solve %s",solved?"true":"false");
+//    printf("\n233333\n");
 
     while (ptc == false) {
         iterations_++;

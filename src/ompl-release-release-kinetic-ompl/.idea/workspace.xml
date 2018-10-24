@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
+      <config projectName="ompl" targetName="test_state_operations" />
+      <config projectName="ompl" targetName="test_2dcircles_opt_geometric" />
       <config projectName="ompl" targetName="demo_CForestCircleGridBenchmark" />
       <config projectName="ompl" targetName="demo_GeometricCarPlanning" />
       <config projectName="ompl" targetName="demo_Koules" />
@@ -11,22 +13,21 @@
       <config projectName="ompl" targetName="ompl" />
       <config projectName="ompl" targetName="demo_VectorFieldNonconservative" />
       <config projectName="ompl" targetName="regression_test" />
-      <config projectName="ompl" targetName="demo_ThunderLightning" />
+      <config projectName="ompl" targetName="demo_PlannerProgressProperties" />
+      <config projectName="ompl" targetName="test_gridb" />
       <config projectName="ompl" targetName="test_state_storage" />
       <config projectName="ompl" targetName="demo_RigidBodyPlanningWithIntegrationAndControls" />
       <config projectName="ompl" targetName="demo_RigidBodyPlanningWithIK" />
       <config projectName="ompl" targetName="test_2denvs_geometric" />
-      <config projectName="ompl" targetName="test_gridb" />
+      <config projectName="ompl" targetName="demo_VectorFieldConservative" />
       <config projectName="ompl" targetName="test_pdf" />
       <config projectName="ompl" targetName="test_2dmap_control" />
       <config projectName="ompl" targetName="demo_PlannerData" />
       <config projectName="ompl" targetName="demo_HypercubeBenchmark" />
       <config projectName="ompl" targetName="demo_RigidBodyPlanningWithControls" />
-      <config projectName="ompl" targetName="demo_VectorFieldConservative" />
-      <config projectName="ompl" targetName="test_2dcircles_opt_geometric" />
-      <config projectName="ompl" targetName="test_heap" />
-      <config projectName="ompl" targetName="test_2dmap_geometric_simple" />
       <config projectName="ompl" targetName="test_machine_specs" />
+      <config projectName="ompl" targetName="demo_ThunderLightning" />
+      <config projectName="ompl" targetName="test_2dmap_geometric_simple" />
       <config projectName="ompl" targetName="test_state_spaces" />
       <config projectName="ompl" targetName="test_planner_data_control" />
       <config projectName="ompl" targetName="demo_KinematicChainBenchmark" />
@@ -35,12 +36,11 @@
       <config projectName="ompl" targetName="demo_OptimalPlanning" />
       <config projectName="ompl" targetName="demo_HybridSystemPlanning" />
       <config projectName="ompl" targetName="demo_StateSampling" />
-      <config projectName="ompl" targetName="test_planner_data" />
       <config projectName="ompl" targetName="py_ompl" />
       <config projectName="ompl" targetName="clean_bindings" />
       <config projectName="ompl" targetName="test_grid" />
-      <config projectName="ompl" targetName="test_state_operations" />
-      <config projectName="ompl" targetName="demo_PlannerProgressProperties" />
+      <config projectName="ompl" targetName="test_heap" />
+      <config projectName="ompl" targetName="test_planner_data" />
       <config projectName="ompl" targetName="test_2dmap_ik" />
       <config projectName="ompl" targetName="demo_RigidBodyPlanningWithODESolverAndControls" />
     </generated>
@@ -52,10 +52,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d21957e-2a7a-4a85-9666-734d32d9d84f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ompl/geometric/planners/rrt/RRTstarReform.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ompl/geometric/planners/rrt/RRTstarReform.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ompl/geometric/planners/rrt/src/RRTstarReform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ompl/geometric/planners/rrt/src/RRTstarReform.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sims/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sims/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/../../build/clion_ompl/" />
@@ -74,9 +71,9 @@
           <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -96,13 +93,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="567" />
+          <entry key="cpp" value="568" />
           <entry key="h" value="113" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="680" />
+          <entry key="ObjectiveC" value="681" />
         </counts>
       </usages-collector>
     </session>
@@ -117,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ompl/geometric/planners/rrt/RRTstarReform.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2780">
-              <caret line="451" column="41" lean-forward="true" selection-start-line="451" selection-start-column="41" selection-end-line="451" selection-end-column="41" />
+            <state relative-caret-position="9471">
+              <caret line="451" column="41" selection-start-line="451" selection-start-column="41" selection-end-line="451" selection-end-column="41" />
               <folding>
                 <element signature="e#1993#2045#0" expanded="true" />
               </folding>
@@ -129,8 +126,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ompl/geometric/planners/rrt/src/RRTstarReform.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="126" column="38" lean-forward="true" selection-start-line="126" selection-start-column="38" selection-end-line="126" selection-end-column="38" />
+            <state relative-caret-position="270">
+              <caret line="284" selection-start-line="284" selection-start-column="2" selection-end-line="287" selection-end-column="26" />
               <folding>
                 <element signature="e#1890#1944#0" expanded="true" />
               </folding>
@@ -141,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ompl/geometric/planners/rrt/RRTConnect.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="71" column="42" lean-forward="true" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="45" />
+            <state relative-caret-position="1491">
+              <caret line="71" column="42" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -150,8 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/base/PlannerTest.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="82" column="46" lean-forward="true" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
+            <state relative-caret-position="1722">
+              <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -159,7 +156,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
+            <state relative-caret-position="3150">
               <caret line="150" column="100" selection-start-line="150" selection-start-column="73" selection-end-line="150" selection-end-column="100" />
             </state>
           </provider>
@@ -208,11 +205,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="2221" />
-    <option name="y" value="220" />
-    <option name="width" value="1394" />
-    <option name="height" value="728" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1863" />
+    <option name="y" value="-6" />
+    <option name="width" value="1863" />
+    <option name="height" value="1086" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -594,17 +591,18 @@
       <workItem from="1539933322879" duration="1128000" />
       <workItem from="1540360705903" duration="703000" />
       <workItem from="1540363143042" duration="7576000" />
+      <workItem from="1540383670903" duration="990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28785000" />
+    <option name="totallyTimeSpent" value="29775000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2221" y="220" width="1394" height="728" extended-state="0" />
+    <frame x="1977" y="-6" width="1863" height="1086" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27596438" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20803522" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -877,41 +875,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ompl/geometric/planners/rrt/RRTConnect.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="71" column="42" lean-forward="true" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/base/PlannerTest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="82" column="46" lean-forward="true" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="150" column="100" selection-start-line="150" selection-start-column="73" selection-end-line="150" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ompl/geometric/planners/rrt/RRTstarReform.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2780">
-          <caret line="451" column="41" lean-forward="true" selection-start-line="451" selection-start-column="41" selection-end-line="451" selection-end-column="41" />
+        <state relative-caret-position="9471">
+          <caret line="451" column="41" selection-start-line="451" selection-start-column="41" selection-end-line="451" selection-end-column="41" />
           <folding>
             <element signature="e#1993#2045#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ompl/geometric/planners/rrt/RRTConnect.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1491">
+          <caret line="71" column="42" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/base/PlannerTest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1722">
+          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ompl/geometric/planners/rrt/src/RRTConnect.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3150">
+          <caret line="150" column="100" selection-start-line="150" selection-start-column="73" selection-end-line="150" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ompl/geometric/planners/rrt/src/RRTstarReform.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="126" column="38" lean-forward="true" selection-start-line="126" selection-start-column="38" selection-end-line="126" selection-end-column="38" />
+        <state relative-caret-position="270">
+          <caret line="284" selection-start-line="284" selection-start-column="2" selection-end-line="287" selection-end-column="26" />
           <folding>
             <element signature="e#1890#1944#0" expanded="true" />
           </folding>
