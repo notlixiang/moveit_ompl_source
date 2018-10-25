@@ -128,13 +128,16 @@ ompl::geometric::RRTstarReform::RRTstarReform(const base::SpaceInformationPtr &s
 //    params_.remove("sample_rejection");
 //    params_.remove("new_state_rejection");
 //    params_.remove("focus_search");
-    OMPL_INFORM("\n23332141124141433\n");
-//    RRTConnectPlanner_=new ompl::geometric::RRTConnect(si);
-
+    RRTConnectPlanner_=new ompl::geometric::RRTConnect(si);
+//    OMPL_INFORM("setup1");
+//    RRTConnectPlanner_->setup();
+//    OMPL_INFORM("setup2");
+//    bool solved = RRTConnectPlanner_->solve(base::timedPlannerTerminationCondition(1.0));
 }
 
 ompl::geometric::RRTstarReform::~RRTstarReform() {
     freeMemory();
+    delete RRTConnectPlanner_;
 }
 
 void ompl::geometric::RRTstarReform::setup() {
@@ -180,6 +183,12 @@ void ompl::geometric::RRTstarReform::setup() {
 
     // Calculate some constants:
     calculateRewiringLowerBounds();
+
+
+    OMPL_INFORM("setup");
+    RRTConnectPlanner_->setup();
+
+
 }
 
 void ompl::geometric::RRTstarReform::clear() {
@@ -199,6 +208,9 @@ void ompl::geometric::RRTstarReform::clear() {
     bestCost_ = base::Cost(std::numeric_limits<double>::quiet_NaN());
     prunedCost_ = base::Cost(std::numeric_limits<double>::quiet_NaN());
     prunedMeasure_ = 0.0;
+
+
+    RRTConnectPlanner_->clear();
 }
 
 ompl::base::PlannerStatus ompl::geometric::RRTstarReform::solve(const base::PlannerTerminationCondition &ptc) {
@@ -280,12 +292,16 @@ ompl::base::PlannerStatus ompl::geometric::RRTstarReform::solve(const base::Plan
     // our functor for sorting nearest neighbors
     CostIndexCompare compareFn(costs, *opt_);
 
-    //add RRTconnect here
-
+//    //add RRTconnect here
+//    OMPL_INFORM("1");
+//    RRTConnectPlanner_->setup();
 //    RRTConnectPlanner_->clear();
+//    OMPL_INFORM("2");
 //    bool solved = RRTConnectPlanner_->solve(base::timedPlannerTerminationCondition(1.0));
-//    //OMPL_INFORM("RRTConnectPlanner_->solve %s",solved?"true":"false");
-//    printf("\n233333\n");
+    RRTConnectPlanner_->setProblemDefinition(pdef_);
+    bool solved = RRTConnectPlanner_->solve(ptc);
+
+    OMPL_INFORM("RRTConnectPlanner_->solve %s",solved?"true":"false");
 
     while (ptc == false) {
         iterations_++;
