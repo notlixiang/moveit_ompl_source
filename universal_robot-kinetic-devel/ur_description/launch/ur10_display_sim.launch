@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_description" default="robot_description"/>
+  <param name="robot_description" command="cat $(find ur_description)/urdf/ur10_robot_huojia.urdf"/>
+  <param name="$(arg robot_description)_semantic" textfile="$(find move_ur10_config)/config/ur10_prm.srdf" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    <param name="use_gui" value="true"/>
+    <param name="zeros/shoulder_pan_joint" value="0.48" />
+	<param name="zeros/shoulder_lift_joint" value="-1.26"/>
+	<param name="zeros/elbow_joint" value="-1.5896"/>
+	<param name="zeros/wrist_1_joint" value="1.7762"/>
+	<param name="zeros/wrist_2_joint" value="-1.3521"/>
+	<param name="zeros/wrist_3_joint" value="-1.224"/>
+  </node>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" >
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" />
+</launch>

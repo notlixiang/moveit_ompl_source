@@ -1,0 +1,6 @@
+int64 mode
+int64 agv_position
+int64 id
+geometry_msgs/Pose pose
+---
+std_msgs/Bool result
