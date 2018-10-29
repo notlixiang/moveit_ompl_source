@@ -300,7 +300,8 @@ ompl::base::PlannerStatus ompl::geometric::RRTstarReform::solve(const base::Plan
 //    bool solved = RRTConnectPlanner_->solve(base::timedPlannerTerminationCondition(1.0));
 
     RRTConnectPlanner_->setProblemDefinition(pdef_);
-    bool solved = RRTConnectPlanner_->solve(ptc);
+//    bool solved = RRTConnectPlanner_->solve(ptc);
+    bool solved = RRTConnectPlanner_->solve(base::timedPlannerTerminationCondition(5.0));
     OMPL_INFORM("RRTConnectPlanner_->solve %s",solved?"true":"false");
 
 
